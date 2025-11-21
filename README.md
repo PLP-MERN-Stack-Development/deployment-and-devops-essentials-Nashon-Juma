@@ -1,77 +1,77 @@
-# Deployment and DevOps for MERN Applications
+# RoboCorp Innovations Website
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+This repository contains the frontend and backend code for RoboCorp Innovations, a company dedicated to pioneering the future of robotics. The website showcases our vision, products, and contact information.
 
-## Assignment Overview
+## Project Overview
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+The application is built using a MERN (MongoDB, Express.js, React.js, Node.js) stack:
+- **Frontend**: Developed with React, providing an interactive user interface for showcasing RoboCorp's products and services.
+- **Backend**: Built with Express.js and Node.js, handling API requests and managing data persistence with MongoDB.
+
+## Features
+
+- **Robotics Company Information**: Details about RoboCorp Innovations, its mission, and vision.
+- **Product Showcase**: Sections dedicated to various robot models, including Industrial Automation Bots, Service & Logistics Drones, and Exploration Rovers.
+- **Contact Information**: Easy access for inquiries and collaborations.
 
 ## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+Follow these steps to set up and run the project locally:
 
-## Files Included
+### Prerequisites
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+- Node.js (v14 or higher)
+- npm (v6 or higher) or Yarn (v1.22 or higher)
+- MongoDB instance (local or cloud-based, e.g., MongoDB Atlas)
 
-## Requirements
+### 1. Clone the repository
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/deployment-and-devops-essentials-Nashon-Juma.git
+cd deployment-and-devops-essentials-Nashon-Juma
+```
 
-## Deployment Platforms
+### 2. Backend Setup
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+Navigate to the `backend` directory, install dependencies, and start the server.
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+```bash
+cd backend
+npm install
+# Create a .env file based on .env.example with your MongoDB URI
+cp .env.example .env
+# Edit .env and set MONGO_URI, e.g., MONGO_URI="mongodb://localhost:27017/robocorps_db"
+npm start
+```
 
-## CI/CD Pipeline
+The backend server will run on `http://localhost:5000` (or the PORT specified in your `.env` file).
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+### 3. Frontend Setup
 
-## Submission
+In a new terminal, navigate to the `frontend` directory, install dependencies, and start the React development server.
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```bash
+cd frontend
+npm install
+npm start
+```
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+The frontend application will open in your browser, typically at `http://localhost:3000`.
 
-## Resources
+## Technologies Used
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+- **Frontend**: React.js, HTML, CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (via Mongoose ODM)
+
+## Deployment
+
+*(This section can be updated with actual deployment details once deployed)*
+
+## Contributing
+
+Feel free to fork the repository and contribute.
+
+## License
+
+MIT
