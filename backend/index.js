@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Basic Route
 app.get('/', (req, res) => {
-  res.send('MERN Backend is running!');
+  res.send('RoboCorp Backend is running!');
 });
 
 // Start the server
